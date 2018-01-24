@@ -1,0 +1,31 @@
+<ActionBar title="Cam Test Capture" class="action-bar">
+	<ActionItem (tap)="test()" ios.systemIcon="15" ios.position="right" android.systemIcon="ic_menu_camera" text="Capture" android.position="actionBar">
+	</ActionItem>
+</ActionBar>
+<GridLayout>
+	<!-- CAMERA WITH OVERLAY -->
+	<!-- <CameraPlus debug="true"
+		(loaded)="camLoaded($event)" 
+		(toggleCameraEvent)="toggleCameraEvent($event)" 
+		(photoCapturedEvent)="photoCapturedEvent($event)"
+	    (imagesSelectedEvent)="imagesSelectedEvent($event)" >
+		<GridLayout rows="*, auto, *" columns="*, auto, *">
+			<GridLayout colSpan="3" class="bg-overlay"></GridLayout>
+			<GridLayout row="1" class="bg-overlay"></GridLayout>
+			<GridLayout row="1" col="2" class="bg-overlay"></GridLayout>
+			<GridLayout row="2" colSpan="3" class="bg-overlay"></GridLayout>
+			<Label row="1" col="1" class="overlay-label" text="📷➕"></Label>
+			<Image src="https://d2odgkulk9w7if.cloudfront.net/images/default-source/default-album/nativescript.png" row="1" col="1" stretch="aspectFill" class="overlay"></Image>
+			<Image src="res://nativescript" row="1" col="1" stretch="aspectFill" class="overlay"></Image>
+		</GridLayout>
+	</CameraPlus> -->
+
+	<!-- HIDE BUTTONS -->
+	<CameraPlus debug="true" galleryPickerMode="single"
+		showFlashIcon="false" showToggleIcon="false" showCaptureIcon="false" showGalleryIcon="false" 
+		(loaded)="camLoaded($event)" 
+		(toggleCameraEvent)="toggleCameraEvent($event)" 
+		(photoCapturedEvent)="photoCapturedEvent($event)"
+		(imagesSelectedEvent)="imagesSelectedEvent($event)" >
+	</CameraPlus>
+</GridLayout>

@@ -1,0 +1,13 @@
+.overlay {
+	width: 95%;
+	height: auto;
+}
+
+.bg-overlay {
+	background-color: black;
+	opacity: 0.75;
+}
+
+.overlay-label {
+	font-size: 40;
+}

@@ -1,0 +1,15 @@
+<ActionBar title="Cam Test Dashboard" class="action-bar">
+		<ActionItem *ngIf="!busy" (tap)="captureNewImage()" ios.systemIcon="15" ios.position="right" android.systemIcon="ic_menu_camera" text="Capture"
+		 android.position="actionBar"></ActionItem>
+	</ActionBar>
+	<GridLayout class="page" rows="auto, auto, *">
+		<Button text="To the camera!" (tap)="captureNewImage()" *ngIf="!busy"></Button>
+		<Label row="1" *ngIf="imageSource" text="Here's the picture you captured!" style="margin-bottom: 10; font: 20;"></Label>
+		<Image row="2" class="" stretch="none" *ngIf="imageSource" [src]="imageSource"></Image>
+		<GridLayout rowSpan="3" class="bg-busy" rows="*, auto, *" *ngIf="busy">
+			<StackLayout row="1">
+				<ActivityIndicator busy="true" class="activity-indicator"></ActivityIndicator>
+				<Label class="h1 text-center" text="Loading Camera, please wait..." textWrap="true"></Label>
+			</StackLayout>
+		</GridLayout>
+	</GridLayout>
